@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "via_administracions",
+  "info": {
+    "singularName": "via-administracion",
+    "pluralName": "via-administracions",
+    "displayName": "ViaAdministracion"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "NombreVia": {
+      "type": "string"
+    },
+    "Descripcion": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "trabajadors",
+  "info": {
+    "singularName": "trabajador",
+    "pluralName": "trabajadors",
+    "displayName": "Trabajador"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PrimerNombre": {
+      "type": "string"
+    },
+    "SegundoNombre": {
+      "type": "string"
+    },
+    "PrimerApellido": {
+      "type": "string"
+    },
+    "SegundoApellido": {
+      "type": "string"
+    },
+    "Telefono": {
+      "type": "string"
+    }
+  }
+}

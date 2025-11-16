@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "unidad_ventas",
+  "info": {
+    "singularName": "unidad-venta",
+    "pluralName": "unidad-ventas",
+    "displayName": "UnidadVenta"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "NombreUnidad": {
+      "type": "string"
+    },
+    "Descripcion": {
+      "type": "text"
+    }
+  }
+}

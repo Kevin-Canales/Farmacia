@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "forma_farmaceuticas",
+  "info": {
+    "singularName": "forma-farmaceutica",
+    "pluralName": "forma-farmaceuticas",
+    "displayName": "FormaFarmaceutica"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "FormaFarmaceutica": {
+      "type": "string"
+    },
+    "Descripcion": {
+      "type": "text"
+    }
+  }
+}

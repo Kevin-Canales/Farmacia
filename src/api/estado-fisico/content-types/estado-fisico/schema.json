@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "estado_fisicos",
+  "info": {
+    "singularName": "estado-fisico",
+    "pluralName": "estado-fisicos",
+    "displayName": "EstadoFisico"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "NombreEstado": {
+      "type": "string"
+    },
+    "Descripcion": {
+      "type": "text"
+    }
+  }
+}

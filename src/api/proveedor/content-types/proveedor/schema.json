@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "proveedors",
+  "info": {
+    "singularName": "proveedor",
+    "pluralName": "proveedors",
+    "displayName": "Proveedor"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "NombreProveedor": {
+      "type": "string"
+    },
+    "Telefono": {
+      "type": "string"
+    },
+    "Correo": {
+      "type": "text"
+    },
+    "Direccion": {
+      "type": "text"
+    }
+  }
+}
