@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "detalle_compras",
+  "info": {
+    "singularName": "detalle-compra",
+    "pluralName": "detalle-compras",
+    "displayName": "DetalleCompra"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Cantidad": {
+      "type": "integer"
+    },
+    "PrecioUnitario": {
+      "type": "decimal"
+    }
+  }
+}

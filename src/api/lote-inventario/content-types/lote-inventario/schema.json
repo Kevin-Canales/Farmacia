@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lote_inventarios",
+  "info": {
+    "singularName": "lote-inventario",
+    "pluralName": "lote-inventarios",
+    "displayName": "LoteInventario"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "NumeroLote": {
+      "type": "string"
+    },
+    "FechaCaducidad": {
+      "type": "date"
+    },
+    "StockUnidadBase": {
+      "type": "integer"
+    }
+  }
+}

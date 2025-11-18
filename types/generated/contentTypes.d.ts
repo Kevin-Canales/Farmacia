@@ -491,6 +491,65 @@ export interface ApiClienteCliente extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiCompraCompra extends Struct.CollectionTypeSchema {
+  collectionName: 'compras';
+  info: {
+    displayName: 'Compra';
+    pluralName: 'compras';
+    singularName: 'compra';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Fecha: Schema.Attribute.Date;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::compra.compra'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    Total: Schema.Attribute.Decimal;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiDetalleCompraDetalleCompra
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'detalle_compras';
+  info: {
+    displayName: 'DetalleCompra';
+    pluralName: 'detalle-compras';
+    singularName: 'detalle-compra';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Cantidad: Schema.Attribute.Integer;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::detalle-compra.detalle-compra'
+    > &
+      Schema.Attribute.Private;
+    PrecioUnitario: Schema.Attribute.Decimal;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiEstadoFisicoEstadoFisico
   extends Struct.CollectionTypeSchema {
   collectionName: 'estado_fisicos';
@@ -551,6 +610,37 @@ export interface ApiFormaFarmaceuticaFormaFarmaceutica
   };
 }
 
+export interface ApiLoteInventarioLoteInventario
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'lote_inventarios';
+  info: {
+    displayName: 'LoteInventario';
+    pluralName: 'lote-inventarios';
+    singularName: 'lote-inventario';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    FechaCaducidad: Schema.Attribute.Date;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::lote-inventario.lote-inventario'
+    > &
+      Schema.Attribute.Private;
+    NumeroLote: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    StockUnidadBase: Schema.Attribute.Integer;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiMarcaMarca extends Struct.CollectionTypeSchema {
   collectionName: 'marcas';
   info: {
@@ -570,6 +660,67 @@ export interface ApiMarcaMarca extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     NombreMarca: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiProductoUnidadVentaProductoUnidadVenta
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'producto_unidad_ventas';
+  info: {
+    displayName: 'ProductoUnidadVenta';
+    pluralName: 'producto-unidad-ventas';
+    singularName: 'producto-unidad-venta';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Equivalencia: Schema.Attribute.Integer;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::producto-unidad-venta.producto-unidad-venta'
+    > &
+      Schema.Attribute.Private;
+    Precio: Schema.Attribute.Decimal;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiProductoProducto extends Struct.CollectionTypeSchema {
+  collectionName: 'productos';
+  info: {
+    displayName: 'Producto';
+    pluralName: 'productos';
+    singularName: 'producto';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Descripcion: Schema.Attribute.Text;
+    Estado: Schema.Attribute.Boolean;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::producto.producto'
+    > &
+      Schema.Attribute.Private;
+    NombreProducto: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    Stock: Schema.Attribute.Integer;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1210,9 +1361,14 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::categoria.categoria': ApiCategoriaCategoria;
       'api::cliente.cliente': ApiClienteCliente;
+      'api::compra.compra': ApiCompraCompra;
+      'api::detalle-compra.detalle-compra': ApiDetalleCompraDetalleCompra;
       'api::estado-fisico.estado-fisico': ApiEstadoFisicoEstadoFisico;
       'api::forma-farmaceutica.forma-farmaceutica': ApiFormaFarmaceuticaFormaFarmaceutica;
+      'api::lote-inventario.lote-inventario': ApiLoteInventarioLoteInventario;
       'api::marca.marca': ApiMarcaMarca;
+      'api::producto-unidad-venta.producto-unidad-venta': ApiProductoUnidadVentaProductoUnidadVenta;
+      'api::producto.producto': ApiProductoProducto;
       'api::proveedor.proveedor': ApiProveedorProveedor;
       'api::trabajador.trabajador': ApiTrabajadorTrabajador;
       'api::unidad-venta.unidad-venta': ApiUnidadVentaUnidadVenta;

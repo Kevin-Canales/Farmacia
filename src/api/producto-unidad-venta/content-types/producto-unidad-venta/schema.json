@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "producto_unidad_ventas",
+  "info": {
+    "singularName": "producto-unidad-venta",
+    "pluralName": "producto-unidad-ventas",
+    "displayName": "ProductoUnidadVenta"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Equivalencia": {
+      "type": "integer"
+    },
+    "Precio": {
+      "type": "decimal"
+    }
+  }
+}
