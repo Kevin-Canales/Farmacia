@@ -22,6 +22,12 @@
     },
     "Direccion": {
       "type": "text"
+    },
+    "compra": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::compra.compra",
+      "inversedBy": "proveedors"
     }
   }
 }

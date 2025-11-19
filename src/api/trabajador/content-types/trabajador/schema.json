@@ -25,6 +25,29 @@
     },
     "Telefono": {
       "type": "string"
+    },
+    "admin_users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "admin::user"
+    },
+    "compra": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::compra.compra",
+      "inversedBy": "trabajadors"
+    },
+    "baja_producto": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::baja-producto.baja-producto",
+      "inversedBy": "trabajadors"
+    },
+    "venta": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::venta.venta",
+      "inversedBy": "trabajadors"
     }
   }
 }

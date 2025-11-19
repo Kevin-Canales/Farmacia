@@ -16,6 +16,12 @@
     },
     "Descripcion": {
       "type": "text"
+    },
+    "producto_unidad_venta": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::producto-unidad-venta.producto-unidad-venta",
+      "inversedBy": "unidad_ventas"
     }
   }
 }

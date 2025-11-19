@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "motivos",
+  "info": {
+    "singularName": "motivo",
+    "pluralName": "motivos",
+    "displayName": "Motivo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nombre": {
+      "type": "string"
+    },
+    "Descripcion": {
+      "type": "string"
+    },
+    "baja_producto": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::baja-producto.baja-producto",
+      "inversedBy": "motivos"
+    }
+  }
+}

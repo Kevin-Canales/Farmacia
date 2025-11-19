@@ -25,6 +25,12 @@
     },
     "Telefono": {
       "type": "string"
+    },
+    "venta": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::venta.venta",
+      "inversedBy": "clientes"
     }
   }
 }

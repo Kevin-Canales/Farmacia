@@ -16,6 +16,18 @@
     },
     "Precio": {
       "type": "decimal"
+    },
+    "productos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::producto.producto",
+      "mappedBy": "producto_unidad_venta"
+    },
+    "unidad_ventas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::unidad-venta.unidad-venta",
+      "mappedBy": "producto_unidad_venta"
     }
   }
 }

@@ -16,6 +16,24 @@
     },
     "Descripcion": {
       "type": "text"
+    },
+    "estado_fisicos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::estado-fisico.estado-fisico",
+      "mappedBy": "forma_farmaceutica"
+    },
+    "via_administracions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::via-administracion.via-administracion",
+      "mappedBy": "forma_farmaceutica"
+    },
+    "producto": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::producto.producto",
+      "inversedBy": "forma_farmaceuticas"
     }
   }
 }

@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "estantes",
+  "info": {
+    "singularName": "estante",
+    "pluralName": "estantes",
+    "displayName": "Estante"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seccions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::seccion.seccion",
+      "mappedBy": "estante"
+    },
+    "Nombre": {
+      "type": "string"
+    },
+    "Descripcion": {
+      "type": "text"
+    }
+  }
+}

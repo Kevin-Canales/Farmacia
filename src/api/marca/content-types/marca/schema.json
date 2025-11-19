@@ -13,6 +13,12 @@
   "attributes": {
     "NombreMarca": {
       "type": "string"
+    },
+    "producto": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::producto.producto",
+      "inversedBy": "marcas"
     }
   }
 }

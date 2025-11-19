@@ -16,6 +16,18 @@
     },
     "PrecioUnitario": {
       "type": "decimal"
+    },
+    "compras": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::compra.compra",
+      "mappedBy": "detalle_compra"
+    },
+    "productos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::producto.producto",
+      "mappedBy": "detalle_compra"
     }
   }
 }

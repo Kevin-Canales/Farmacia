@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ventas",
+  "info": {
+    "singularName": "venta",
+    "pluralName": "ventas",
+    "displayName": "Venta"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "clientes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::cliente.cliente",
+      "mappedBy": "venta"
+    },
+    "trabajadors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::trabajador.trabajador",
+      "mappedBy": "venta"
+    },
+    "Fecha": {
+      "type": "date"
+    },
+    "Total": {
+      "type": "decimal"
+    }
+  }
+}

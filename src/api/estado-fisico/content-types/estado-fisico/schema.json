@@ -16,6 +16,12 @@
     },
     "Descripcion": {
       "type": "text"
+    },
+    "forma_farmaceutica": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::forma-farmaceutica.forma-farmaceutica",
+      "inversedBy": "estado_fisicos"
     }
   }
 }

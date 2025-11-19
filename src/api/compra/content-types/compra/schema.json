@@ -16,6 +16,27 @@
     },
     "Total": {
       "type": "decimal"
+    },
+    "proveedors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::proveedor.proveedor",
+      "mappedBy": "compra"
+    },
+    "trabajadors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::trabajador.trabajador",
+      "mappedBy": "compra"
+    },
+    "Codigo": {
+      "type": "string"
+    },
+    "detalle_compra": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::detalle-compra.detalle-compra",
+      "inversedBy": "compras"
     }
   }
 }

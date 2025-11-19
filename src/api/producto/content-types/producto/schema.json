@@ -22,6 +22,42 @@
     },
     "Estado": {
       "type": "boolean"
+    },
+    "categorias": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::categoria.categoria",
+      "mappedBy": "producto"
+    },
+    "marcas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::marca.marca",
+      "mappedBy": "producto"
+    },
+    "forma_farmaceuticas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::forma-farmaceutica.forma-farmaceutica",
+      "mappedBy": "producto"
+    },
+    "detalle_compra": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::detalle-compra.detalle-compra",
+      "inversedBy": "productos"
+    },
+    "lote_inventario": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::lote-inventario.lote-inventario",
+      "inversedBy": "productos"
+    },
+    "producto_unidad_venta": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::producto-unidad-venta.producto-unidad-venta",
+      "inversedBy": "productos"
     }
   }
 }

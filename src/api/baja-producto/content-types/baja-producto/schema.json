@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "baja_productos",
+  "info": {
+    "singularName": "baja-producto",
+    "pluralName": "baja-productos",
+    "displayName": "BajaProducto"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "trabajadors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::trabajador.trabajador",
+      "mappedBy": "baja_producto"
+    },
+    "Fecha": {
+      "type": "date"
+    },
+    "lote_inventarios": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::lote-inventario.lote-inventario",
+      "mappedBy": "baja_producto"
+    },
+    "Cantidad": {
+      "type": "integer"
+    },
+    "motivos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::motivo.motivo",
+      "mappedBy": "baja_producto"
+    }
+  }
+}

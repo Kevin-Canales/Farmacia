@@ -1,27 +1,27 @@
 {
   "kind": "collectionType",
-  "collectionName": "categorias",
+  "collectionName": "seccions",
   "info": {
-    "singularName": "categoria",
-    "pluralName": "categorias",
-    "displayName": "Categoria"
+    "singularName": "seccion",
+    "pluralName": "seccions",
+    "displayName": "Seccion"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "NombreCategoria": {
+    "Nombre": {
       "type": "string"
     },
     "Descripcion": {
       "type": "text"
     },
-    "producto": {
+    "estante": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "api::producto.producto",
-      "inversedBy": "categorias"
+      "target": "api::estante.estante",
+      "inversedBy": "seccions"
     }
   }
 }

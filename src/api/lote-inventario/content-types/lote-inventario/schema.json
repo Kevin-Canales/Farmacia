@@ -19,6 +19,21 @@
     },
     "StockUnidadBase": {
       "type": "integer"
+    },
+    "Disponible": {
+      "type": "boolean"
+    },
+    "productos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::producto.producto",
+      "mappedBy": "lote_inventario"
+    },
+    "baja_producto": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::baja-producto.baja-producto",
+      "inversedBy": "lote_inventarios"
     }
   }
 }
