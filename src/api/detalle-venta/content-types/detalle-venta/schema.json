@@ -11,15 +11,17 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "venta": {
+    "ventas": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::venta.venta"
+      "relation": "oneToMany",
+      "target": "api::venta.venta",
+      "mappedBy": "detalle_venta"
     },
-    "producto": {
+    "productos": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::producto.producto"
+      "relation": "oneToMany",
+      "target": "api::producto.producto",
+      "mappedBy": "detalle_venta"
     },
     "Cantidad": {
       "type": "integer"

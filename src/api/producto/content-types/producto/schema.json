@@ -58,6 +58,12 @@
       "relation": "manyToOne",
       "target": "api::producto-unidad-venta.producto-unidad-venta",
       "inversedBy": "productos"
+    },
+    "detalle_venta": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::detalle-venta.detalle-venta",
+      "inversedBy": "productos"
     }
   }
 }

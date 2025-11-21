@@ -28,6 +28,12 @@
     },
     "Total": {
       "type": "decimal"
+    },
+    "detalle_venta": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::detalle-venta.detalle-venta",
+      "inversedBy": "ventas"
     }
   }
 }
